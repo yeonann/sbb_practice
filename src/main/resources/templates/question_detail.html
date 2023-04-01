@@ -1,19 +1,7 @@
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-
-<style>
-    @font-face {
-        font-family: 'Dovemayo_gothic';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    html > body {
-        font-family: "Dovemayo_gothic";
-        text-underline-position: under;
-    }
-</style>
-<div class="container my-3">
+<html layout:decorate="~{layout}">
+<head></head>
+<body>
+<div layout:fragment="content" class="container my-3">
     <!-- 질문 -->
     <h2 class="border-bottom py-2" th:text="${question.subject}"></h2>
     <div class="card my-3">
@@ -43,7 +31,9 @@
     <!-- 답변 반복 끝  -->
     <!-- 답변 작성 -->
     <form th:action="@{|/answer/create/${question.id}|}" method="post" class="my-3">
-        <textarea name="content" id="content" rows="10" class="form-control"></textarea>
-        <input type="submit" value="답변등록" class="btn btn-Warning my-2">
+        <textarea name="content" id="content" rows="3" class="form-control"></textarea>
+        <input type="submit" value="답변등록" class="btn btn-warning my-2">
     </form>
 </div>
+</body>
+</html>

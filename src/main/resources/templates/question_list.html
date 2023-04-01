@@ -1,21 +1,9 @@
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-
-<style>
-    @font-face {
-        font-family: 'Dovemayo_gothic';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    html > body {
-        font-family: "Dovemayo_gothic";
-        text-underline-position: under;
-    }
-</style>
-<div class="container my-3">
+<html layout:decorate="~{layout}">
+<head></head>
+<body>
+<div layout:fragment="content" class="container my-3">
     <table class="table">
-        <thead class="table-Warning">
+        <thead class="table-warning">
         <tr>
             <th>번호</th>
             <th>제목</th>
@@ -33,3 +21,5 @@
         </tbody>
     </table>
 </div>
+</body>
+</html>
