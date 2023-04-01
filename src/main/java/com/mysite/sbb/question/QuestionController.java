@@ -12,7 +12,7 @@ import java.util.List;
 public class QuestionController {
     private final QuestionRepository questionRepository;
 
-    @GetMapping("/list")
+    @GetMapping("/question/list")
     public String showList (Model model) {
         List<Question> questionList = questionRepository.findAll();
         model.addAttribute("questionList", questionList);
