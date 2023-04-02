@@ -29,6 +29,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation 'org.springframework.boot:spring-boot-starter-validation' // 글 작성시 입력 값 검증
+	implementation 'org.springframework.boot:spring-boot-starter-security' // 스프링 시큐리티
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE' // 스프링 시큐리티와 관련된 타임리프 라이브러리
 }
 
 tasks.named('test') {
