@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import javax.security.auth.Subject;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,5 +43,14 @@ public class QuestionService {
         q.setAuthor(user);
         questionRepository.save(q);
     }
+    public void modify(Question question, String subject, String content) {
+        question.setSubject(subject);
+        question.setContent(content);
+        question.setModifyDate(LocalDateTime.now());
+        questionRepository.save(question);
+    }
 
+    public void delete(Question question) {
+        questionRepository.delete(question);
+    }
 }

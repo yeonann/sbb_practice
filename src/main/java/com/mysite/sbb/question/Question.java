@@ -25,4 +25,6 @@ public class Question {
     private List<Answer> answerList;
     @ManyToOne
     private SiteUser author;
+    private LocalDateTime modifyDate;
+
 }
